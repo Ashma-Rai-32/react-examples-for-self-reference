@@ -1,0 +1,47 @@
+.base {
+  width: 500px;
+  position: relative;
+  margin: 20px auto;
+}
+.container {
+  display: flex;
+  width: fit-content;
+  /* height: 50px; */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  position: relative;
+}
+.option {
+  padding: 0.5rem;
+  z-index: 1;
+  color: #888;
+  border: 2px solid transparent;
+  transition: 200ms ease-in-out, border 100ms ease-in-out;
+  position: relative;
+}
+.option:hover {
+  color: #555;
+}
+.option.active {
+  color: #ee1111;
+}
+.option:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -0.2rem;
+  width: 2px;
+  height: 100%;
+  background: #ddd;
+  z-index: 0;
+}
+.sliding-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #ddd;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+  z-index: 0;
+}
